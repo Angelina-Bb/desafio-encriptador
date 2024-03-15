@@ -115,12 +115,12 @@ main {
 }
 
 .result {
-    position: absolute;
+
     bottom: 410px;
     width: 320px;
     height: 450px;
     padding: 0;
-    margin-left: 25px;
+    margin: 30px;
 }
 
 .result p {

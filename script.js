@@ -81,7 +81,7 @@ function desencriptarTexto(mensaje) {
 
 const btnCopy = document.querySelector(".button__copy");
 btnCopy.addEventListener("click", copiar = () => {
-    var contenido = document.querySelector(".text-resut").textContent;
+    var contenido = document.querySelector(".text-result").textContent;
     navigator.clipboard.writeText(contenido);
     console.log("hello");
 })
