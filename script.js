@@ -8,13 +8,13 @@ botonEncriptar.onclick = encriptar;
 botonDesencriptar.onclick = desencriptar;
 
 function encriptar() {
-    ocultarAdelante();
+    ocultar();
     var textBox = recuperarTexto();
     resultado.textContent = encriptarTexto(textBox);
 }
 
 function desencriptar() {
-    ocultarAdelante();
+    ocultar();
     var textBox = recuperarTexto();
     resultado.textContent = desencriptarTexto(textBox);
 }
@@ -24,7 +24,7 @@ function recuperarTexto() {
     return textBox.value;
 }
 
-function ocultarAdelante() {
+function ocultar() {
     muneco.classList.add("ocultar");
     container.classList.add("ocultar");
 }
@@ -34,16 +34,16 @@ function encriptarTexto(mensaje) {
     var textoFinal = "";
 
     for (var i = 0; i < texto.length; i++) {
-        if (texto[i] == "a") {
-            textoFinal = textoFinal + "ai";
-        } else if (texto[i] == "e") {
-            textoFinal = textoFinal + "enter";
-        } else if (texto[i] == "i") {
-            textoFinal = textoFinal + "imes";
-        } else if (texto[i] == "o") {
-            textoFinal = textoFinal + "ober";
-        } else if (texto[i] == "u") {
-            textoFinal = textoFinal + "ufat";
+        if (texto[i] == 'a') {
+            textoFinal = textoFinal + 'ai';
+        } else if (texto[i] == 'e') {
+            textoFinal = textoFinal + 'enter';
+        } else if (texto[i] == 'i') {
+            textoFinal = textoFinal + 'imes';
+        } else if (texto[i] == 'o') {
+            textoFinal = textoFinal + 'ober';
+        } else if (texto[i] == 'u') {
+            textoFinal = textoFinal + 'ufat';
         } else {
             textoFinal = textoFinal + texto[i];
         }
@@ -56,20 +56,20 @@ function desencriptarTexto(mensaje) {
     var textoFinal = "";
 
     for (var i = 0; i < texto.length; i++) {
-        if (texto[i] == "a") {
-            textoFinal = textoFinal + "a";
+        if (texto[i] == 'a') {
+            textoFinal = textoFinal + 'a';
             i = i + 1;
-        } else if (texto[i] == "e") {
-            textoFinal = textoFinal + "e";
+        } else if (texto[i] == 'e') {
+            textoFinal = textoFinal + 'e';
             i = i + 4;
-        } else if (texto[i] == "i") {
-            textoFinal = textoFinal + "i";
+        } else if (texto[i] == 'i') {
+            textoFinal = textoFinal + 'i';
             i = i + 3;
-        } else if (texto[i] == "o") {
-            textoFinal = textoFinal + "o";
+        } else if (texto[i] == 'o') {
+            textoFinal = textoFinal + 'o';
             i = i + 3;
-        } else if (texto[i] == "u") {
-            textoFinal = textoFinal + "u";
+        } else if (texto[i] == 'u') {
+            textoFinal = textoFinal + 'u';
             i = i + 3;
         } else {
             textoFinal = textoFinal + texto[i];
@@ -80,7 +80,7 @@ function desencriptarTexto(mensaje) {
 
 
 const btnCopy = document.querySelector(".button__copy");
-    btnCopy.addEventListener("click", copiar = () => {
+btnCopy.addEventListener("click", copiar = () => {
     var contenido = document.querySelector(".text-resut").textContent;
     navigator.clipboard.writeText(contenido);
     console.log("hello");
